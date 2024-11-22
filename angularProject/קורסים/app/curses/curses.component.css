@@ -1,0 +1,13 @@
+.ful{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: xx-large;
+    border:coral 2px solid;
+}
+.full{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-small;
+    border:red 2px solid;
+}
+img{
+    width: 50px;
+}

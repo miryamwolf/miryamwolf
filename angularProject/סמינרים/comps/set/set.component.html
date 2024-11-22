@@ -1,0 +1,46 @@
+<div [hidden]="sc.set"class="container mt-3">
+    <h2>עריכה</h2>
+    
+    <form  (ngSubmit)="save()">
+      <div class="mb-3 mt-3">
+        <label for="id">ת.ז:</label>
+        <input type="number" class="form-control" [(ngModel)]="sc.setStud.id"
+         id="id" placeholder="Enter id" name="id" disabled>
+      </div>
+      <div class="mb-3">
+        <label for="n">שם פרטי</label>
+        <input type="text" class="form-control" id="fn" [(ngModel)]="sc.setStud.fName"
+         placeholder="הכנס שם פרטי" name="fn">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="stock">שם משפחה</label>
+        <input type="text" class="form-control" id="ln" [(ngModel)]="sc.setStud.lName"
+        placeholder="הכנס שם משפחה" name="ln">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="stock">מספר טלפון</label>
+        <input type="number" class="form-control" id="phone" [(ngModel)]="sc.setStud.phone"
+        placeholder="הכנס מספר טלפון" name="phone">
+      </div>
+      <div class="mb-3">
+        <label for="pic">תמונה</label>
+        <input type="file" class="form-control" id="pic" (change)="choosePic($event)"
+         placeholder="הכנס תמונה" name="pic">
+      </div>
+      <div class="mb-3">
+        <label for="school">בחר סמינר:</label>
+     <select [(ngModel)]="sc.setStud.school" name="school">
+      @for(c of sc.schools; track c.id)
+      {
+        <!-- innerText ברירת מחדל - קשר דו כיווני בסלקט שומר את ה -->
+         <!-- option של ה -->
+          <!--value כדי לשמור ערך אחר נוסיף מאפיין  -->
+        <!-- <option [value]="c.code">{{c.nameCat}}</option> -->
+         <!--ngValue כדי לשמור אובייקט יש להשתמש ב -->
+        <option [ngValue]="c">{{c.name}}</option>
+      }
+     </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>

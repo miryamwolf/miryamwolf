@@ -1,0 +1,32 @@
+<div>
+    
+     <table>
+        <tr>
+            <th>השארות בשבת</th>
+            <th>מקומות פנויים</th>
+            <th>זמן טיסה</th>
+            <th>מחיר</th>
+            <th>יעד</th>
+            <th>שם החברה</th>
+        </tr>
+        @for (f of flightshours; track f.to) 
+        {
+            <tr [ngStyle]="(f.onshabbat)?{'color':'green'}:{'color':'red'}">
+                @if(f.onshabbat)
+                {
+                <td>✅</td>
+                }
+                @else
+                {
+                <td>❌</td>
+                }
+            <td>{{f.emptyseets}}</td>
+            <td>{{f.time}}</td>
+            <td>{{f.price}}</td>
+             <td>{{f.to}}</td>
+            <td>{{f.name}}</td>
+           
+         </tr>
+        }
+     </table>
+</div>

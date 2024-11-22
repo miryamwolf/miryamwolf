@@ -1,0 +1,61 @@
+<h1>רשימת בנות הסמינרים</h1>
+
+<div  class="container mt-3">
+    <table class="table table-hover">
+    <thead>
+    <tr>
+        <th>טלפון</th>
+        <th>שם משפחה</th>
+        <th>שם פרטי</th>
+        <th>ת.ז</th>
+    </tr></thead>
+    <tbody>
+    
+        @for(s of sc.students; track s.id)
+    {
+        <tr>
+           
+             <td>{{s.phone}}</td>
+             <td>{{s.lName}}</td>
+             <td>{{s.fName}}</td>
+             <td>{{s.id}}</td>
+             <td><button (click)="moreD(s)" >פרטים נוספים</button></td>
+             <td [hidden]="s.school"><button (click)="set(s)" >עריכה</button></td>
+        </tr>
+    }
+</tbody>
+</table>
+
+</div>
+
+<div [hidden]="sc.details" class="container mt-3">
+    <table class="table table-hover">
+    <thead>
+    <tr>
+        <th>טלפון</th>
+        <th>שם משפחה</th>
+        <th>שם פרטי</th>
+        <th>ת.ז</th>
+        <th>תמונה</th>
+        <th>סמינר</th>
+        
+     
+    </tr></thead>
+    <tbody>
+    
+      
+        <tr>
+            <td>{{sc.stud.phone}}</td>
+            <td>{{sc.stud.lName}}</td>
+            <td>{{sc.stud.fName}}</td>
+            <td>{{sc.stud.id}}</td>
+            <td><img [src]="sc.stud.pic" height="25"></td>
+             <td>{{sc.stud.school?.name}}</td>
+             <td><button (click)="close()" >סגור</button></td>
+        </tr>
+    
+</tbody>
+</table>
+
+</div>
+

@@ -1,0 +1,43 @@
+<div class="container mt-3"></div>
+<h3>Form student</h3>
+<form class="was-validated" (ngSubmit)="save()" #myForm="ngForm">
+  <div class="mb-3 mt-3">
+    <label for="sname" class="form-label">שם:</label>
+    <input type="text" class="form-control" id="sname" placeholder="הכניסי שם תלמידה" name="sname" [(ngModel)]="student.name"
+       #sName="ngModel" minlength="2" pattern="[א-ת]*">
+      @if(sName.invalid && sName.dirty || sName.touched){
+        <div class="invalid-feddback">
+          <p [hidden]="!sName.errors!['minlength']">שם לא תקין</p>
+          <p [hidden]="!sName.errors!['pattern']">תווים לא חוקיים</p>
+        </div>
+      }
+      <div class="mb-3 mt-3">
+        <label for="sid" class="form-label">ת.ז:</label>
+        <input type="text" class="form-control" id="sid" placeholder="מספר זהות" name="sid" [(ngModel)]="student.id"
+          required="" #sId="ngModel" pattern="\d{9}">
+          @if(sId.invalid && (sId.dirty || sId.touched)){
+            <div class="invalid-feddback">
+              <p [hidden]="!sId.errors!['required']">שדה חובה</p>
+              <p [hidden]="!sId.errors!['pattern']">מספר זהות לא תקין</p>
+            </div>
+          }
+          <div class="mb-3 mt-3">
+            <label for="sphone" class="form-label">טלפון:</label>
+            <input type="text" class="form-control" id="sphone" placeholder="טלפון" name="sphone" [(ngModel)]="student.phone"
+              required #sPhone="ngModel" pattern="\d{9,10}">
+              @if(sPhone.invalid && (sPhone.dirty || sPhone.touched)){
+                <div class="invalid-feddback">
+                  <p [hidden]="!sPhone.errors!['pattern']">מספר טלפון לא תקין</p>
+                  <p [hidden]="!sPhone.errors!['required']">שדה חובה</p>
+                </div>
+              }
+              <div class="mb-3 mt-3">
+                <label for="sname" class="form-label">מספר כיתה:</label>
+                <input type="number" class="form-control" id="snum" placeholder="מספר כיתה" name="snum" [(ngModel)]="student.cn"
+                   #sCN="ngModel" min="1" max="7">
+                  @if(sCN.invalid && (sCN.dirty || sCN.touched)){
+                    <div class="invalid-feddback">
+                      <p [hidden]="!sCN.errors!['min']">מספר כיתה לא תקין</p>
+                      <p [hidden]="!sCN.errors!['max']">מספר כיתה לא תקין</p>
+                    </div>
+                  }

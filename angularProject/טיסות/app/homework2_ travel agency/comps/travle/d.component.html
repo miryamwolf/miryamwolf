@@ -1,0 +1,21 @@
+
+    <h1>{{title}}<h1>
+    <h2>{{description}}</h2>
+  
+   <div>
+     <table>
+        <tr>
+            <th>יום</th>
+            <th>שעת פתיחה</th>
+            <th>שעת סגירה</th>
+        </tr>
+        @for (o of openinghours; track o.day) 
+        {
+         <tr>
+            <td>{{o.day}}</td>
+            <td>{{o.from}}</td>
+            <td>{{o.to}}</td>
+         </tr>
+        }
+     </table>
+  </div>

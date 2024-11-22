@@ -1,0 +1,31 @@
+<h4>פרטים נוספים: {{ss.currentP.fName}} {{ss.currentP.lName}}</h4>
+<div class="container mt-3">
+    <table class="table table-hover">
+    <thead>
+    <tr>
+        <th>טלפון</th>
+        <th>שם משפחה</th>
+        <th>שם פרטי</th>
+        <th>ת.ז</th>
+        <th>תמונה</th>
+        <th>סמינר</th>
+        
+     
+    </tr></thead>
+    <tbody>
+    
+      
+        <tr>
+            <td>{{ss.currentP.phone}}</td>
+            <td>{{ss.currentP.lName}}</td>
+            <td>{{ss.currentP.fName}}</td>
+            <td>{{ss.currentP.id}}</td>
+            <td><img [src]="ss.currentP.pic"  style="width:90px"></td>
+             <td>{{ss.currentP.school?.name}}</td>
+             <td><button (click)="close()" >סגור</button></td>
+        </tr>
+    
+</tbody>
+</table>
+
+</div>

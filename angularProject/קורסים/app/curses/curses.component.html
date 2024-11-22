@@ -1,0 +1,74 @@
+<h1>{{t1}}</h1>
+<h2>{{t2}}</h2>
+<div class="container mt-3">
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>קוד חוג</th>
+        <th>שם חוג</th>
+        <th>שם המורה</th>
+        <th>מס' מקומות שנותרו</th>
+        <th>מחיר</th>
+        <th>חוג חדש</th>
+    </tr></thead>
+    <tbody>
+    @for (c of cursess; track c.code) 
+    {
+     <tr [ngClass]="c.seets<3?'ful':''">
+        <td>{{c.code}}</td>
+        <td>{{c.Cname}}</td>
+        <td>{{c.Tname}}</td>
+        <td>{{c.seets}}</td>
+        <td>{{c.price}}</td>
+        <td>{{c.newCY}}</td>
+        <td ><img  [src]="c.pic" ></td>
+         <td ><button (click)="register(c)" [disabled]="c.seets==0">הרשם</button></td>
+     </tr>
+    }
+</tbody>
+ </table>
+</div>
+
+<div class="container mt-3">
+<h2>הוספת חוג</h2>
+
+<form (ngSumit)="save()">
+    <div class="mb-3 mt-3">
+      <label for="id">id:</label>
+      <input type="number" class="form-control" [(ngModel)]="newC.code"
+      id="id" placeholder="Enter id" name="id">
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="name">curse:</label>
+        <input type="text" class="form-control" [(ngModel)]="newC.Cname"
+        id="name" placeholder="Enter curse" name="name">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="Tname">Teacher name:</label>
+        <input type="text" class="form-control" [(ngModel)]="newC.Tname"
+        id="Tname" placeholder="Enter techer name" name="Tname">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="left">left:</label>
+        <input type="number" class="form-control" [(ngModel)]="newC.seets"
+        id="left" placeholder="Enter left" name="left">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="price">price:</label>
+        <input type="number" class="form-control" [(ngModel)]="newC.price"
+        id="price" placeholder="Enter price" name="price">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="newCY">New curse(true/false):</label>
+        <input type="text" class="form-control" [(ngModel)]="newC.newCY"
+        id="newCY" placeholder="Enter true/false" name="newCY">
+      </div>
+       <!-- <div class="mb-3 mt-3">
+        <label for="pic">picture:</label>
+        <input type="file" class="form-control" (change)="choosePic($event)"
+        id="pic" placeholder="Enter picture" name="pic"> -->
+      <!-- </div>  -->
+      <button type="submit"class="btn btn-primary" >הוסף</button>
+</form>
+</div>
+
