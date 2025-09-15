@@ -1,4 +1,6 @@
-# 🌟 About Me
+# miriam wolf
+
+## 🌟 About Me
 
 Motivated and detail-oriented Software Engineering student with a strong academic background and hands-on experience from internships and projects.  
 Known for responsibility, organization, and the ability to meet deadlines while maintaining a positive outlook, even when facing challenging tasks.  
@@ -12,3 +14,7 @@ Development of RESTful APIs in .NET (C#) and Node.js with layered architecture (
 Daily work with SQL Server / MySQL: complex queries, stored procedures, and data analysis.
 Cloud deployment (Render, Clever Cloud), Docker for containerization, and Git for version control.
 Bridging the gap between business and technology: System Analysis → Design → Delivery.
+
+## 🛠️ Languages and Tools
+
+C C++ C# .NET Python Java Node.js Angular React JavaScript HTML5 CSS3 MySQL MongoDB SQL Server Docker Git Linux Windows Blazor
