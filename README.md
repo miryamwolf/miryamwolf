@@ -16,7 +16,7 @@ Bridging the gap between business and technology: System Analysis → Design →
 
 ### 🛠️ Languages and Tools
 
-## 🔹 Programming Languages 🔹 Frameworks & Libraries 🔹 Databases 🔹 Tools & Platforms 
+#### 🔹 Programming Languages 🔹 Frameworks & Libraries 🔹 Databases 🔹 Tools & Platforms 
 
 <p>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" width="40" height="40"/>
