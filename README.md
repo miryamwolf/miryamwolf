@@ -24,7 +24,7 @@ Bridging the gap between business and technology: System Analysis → Design →
 **Server side:** Implemented model relationships and secure token encryption for authentication.  
 **Client side:** Developed reusable generic components and applied middleware patterns for clean and scalable code.
 
-### 🛠️ Languages and Tools
+## 🛠️ Languages and Tools
 
 #### 🔹 Programming Languages 🔹 Frameworks & Libraries 🔹 Databases 🔹 Tools & Platforms 
 
