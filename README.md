@@ -14,6 +14,10 @@ Daily work with SQL Server / MySQL: complex queries, stored procedures, and data
 Cloud deployment (Render, Clever Cloud), Docker for containerization, and Git for version control.
 Bridging the gap between business and technology: System Analysis → Design → Delivery.
 
+## 📁 Featured Projects
+
+● [Pandora-Jewelry-Store](https://github.com/miryamwolf/Pandora-Jewelry-Store)
+
 ### 🛠️ Languages and Tools
 
 #### 🔹 Programming Languages 🔹 Frameworks & Libraries 🔹 Databases 🔹 Tools & Platforms 
