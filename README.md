@@ -16,7 +16,13 @@ Bridging the gap between business and technology: System Analysis → Design →
 
 ## 📁 Featured Projects
 
-● [Pandora-Jewelry-Store](https://github.com/miryamwolf/Pandora-Jewelry-Store)
+● [Pandora-Jewelry-Store](https://github.com/miryamwolf/Pandora-Jewelry-Store) – E2E project developed with **C#, Angular, and SQL**. 
+**Server side:** Designed with a 3-layer architecture, applied dependency injection, and implemented calculated fields for business logic.  
+**Client side:** Built with modular FormModules and dynamic forms for flexible and user-friendly interaction.
+
+• [Apartment-marketing-website](https://github.com/miryamwolf/Apartment-marketing-website) – E2E project built with **Node.js, React.js, and MongoDB**.  
+**Server side:** Implemented model relationships and secure token encryption for authentication.  
+**Client side:** Developed reusable generic components and applied middleware patterns for clean and scalable code.
 
 ### 🛠️ Languages and Tools
 
